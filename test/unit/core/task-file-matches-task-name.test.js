@@ -20,8 +20,8 @@ describe('task-file-matches-task-name', function() {
     it('checks the overrides', function() {
         expect(taskFileMatchesTaskName(
             'sass',
-            {'my-fun-with-sass': 'sass'},
-            'node_modules/grunt-sass/tasks/my-fun-with-sass.js')
+            {'my-fun-task': 'sass'},
+            'node_modules/grunt-sass/tasks/my-fun-task.js')
         ).to.equal(true);
     });
 
