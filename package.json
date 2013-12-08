@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/NickHeiner/lazy-grunt-loading/issues"
   },
-  "homepage": "https://github.com/NickHeiner/lazy-grunt-loading"
+  "homepage": "https://github.com/NickHeiner/lazy-grunt-loading",
+  "dependencies": {
+    "hooker": "~0.2.3",
+    "underscore.string": "~2.3.3",
+    "lodash": "~2.4.1"
+  }
 }
