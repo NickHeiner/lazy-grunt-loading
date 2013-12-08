@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 
             test: {
                 options: {
-                    expr: true,     
+                    expr: true,
                     node: true,
                     globals: {
                         it: true,
