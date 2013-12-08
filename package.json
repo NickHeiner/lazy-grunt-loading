@@ -1,0 +1,23 @@
+{
+  "name": "lazy-grunt-loading",
+  "version": "0.1.0",
+  "description": "Experimental utility to load grunt tasks lazily",
+  "main": "lib/lazy-grunt-loading",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NickHeiner/lazy-grunt-loading"
+  },
+  "keywords": [
+    "grunt",
+    "utility"
+  ],
+  "author": "Nick Heiner <nth23@cornell.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NickHeiner/lazy-grunt-loading/issues"
+  },
+  "homepage": "https://github.com/NickHeiner/lazy-grunt-loading"
+}
