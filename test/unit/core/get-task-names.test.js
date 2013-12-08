@@ -15,4 +15,9 @@ describe('get-task-names', function() {
         expect(getTaskNames(toRun)).to.deep.equal(toRun);
     });
 
+    it('should truncate task names after the colon', function() {
+        var toRun = ['jshint:src', 'go-to:the-moon'];
+        expect(getTaskNames(toRun)).to.deep.equal(['jshint', 'go-to']);
+    })
+
 });
