@@ -35,8 +35,8 @@ module.exports = function(grunt) {
       // Getting this list is outside the scope of this module.
   var taskFiles = getTaskFiles(),
   
-      // Not every grunt task is declared in a file of the same name. 
-      // Pass an override here to get aroun this.
+      // Optional: Not every grunt task is declared in a file of the same name. 
+      // Pass an override here to get around this.
       overrides = { file_name: 'corresponding-task-name'},
       
       // Optional: function to use for logging
