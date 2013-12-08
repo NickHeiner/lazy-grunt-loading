@@ -33,11 +33,16 @@ module.exports = function(grunt) {
 
       // A list of all files that could contain tasks you want to load. 
       // Getting this list is outside the scope of this module.
+      // Ex: ['node_modules/foo/tasks/grunt-foo.js', 'tasks/file_name.js']
   var taskFiles = getTaskFiles(),
   
       // Optional: Not every grunt task is declared in a file of the same name. 
-      // Pass an override here to get around this.
-      overrides = { file_name: 'corresponding-task-name'},
+      // Pass an override here to get around this. This is not necessary if 
+      // the only difference is the file having the 'grunt-' prefix - that
+      // will get handled automatically. In this example, we see above that
+      // taskFiles has 'tasks/file_name.js', which defines the 'bar' task,
+      // so we add that override here.
+      overrides = { file_name: 'bar'},
       
       // Optional: function to use for logging
       log = grunt.verbose.write;
