@@ -1,0 +1,37 @@
+{
+  "name": "lazy-grunt-loading",
+  "version": "0.1.0",
+  "description": "Experimental utility to load grunt tasks lazily",
+  "main": "lib/lazy-grunt-loading",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NickHeiner/lazy-grunt-loading"
+  },
+  "keywords": [
+    "grunt",
+    "utility"
+  ],
+  "author": "Nick Heiner <nth23@cornell.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NickHeiner/lazy-grunt-loading/issues"
+  },
+  "homepage": "https://github.com/NickHeiner/lazy-grunt-loading",
+  "dependencies": {
+    "hooker": "~0.2.3",
+    "underscore.string": "~2.3.3",
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-mocha-test": "~0.8.1",
+    "chai": "~1.8.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4"
+  }
+}
