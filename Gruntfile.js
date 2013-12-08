@@ -17,6 +17,25 @@ module.exports = function(grunt) {
                         'Gruntfile.js'
                     ]
                 }
+            },
+
+            test: {
+                options: {
+                    expr: true,         // allow expressions like foo.ok;
+                    node: true,
+                    globals: {
+                        it: true,
+                        beforeEach: true,
+                        afterEach: true,
+                        describe: true
+                    }
+                },
+                files: {
+                    src: [
+                        'test/**/*.js',
+                        '!test/sandbox/**/*'
+                    ]
+                }
             }
         },
 
