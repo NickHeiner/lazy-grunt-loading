@@ -17,6 +17,10 @@ describe('task-file-matches-task-name', function() {
         expect(taskFileMatchesTaskName('sass', {}, 'node_modules/grunt-sass/tasks/grunt-sass.js')).to.equal(true);
     });
 
+    it('handles a "grunt-" prefix when the task name itself includes characters in that prefix', function() {
+        expect(taskFileMatchesTaskName('task-a', {}, 'node_modules/grunt-sass/tasks/grunt-task-a.js')).to.equal(true);
+    });
+
     it('checks the overrides', function() {
         expect(taskFileMatchesTaskName(
             'sass',

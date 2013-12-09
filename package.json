@@ -1,6 +1,6 @@
 {
   "name": "lazy-grunt-loading",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Experimental utility to load grunt tasks lazily",
   "main": "lib/lazy-grunt-loading",
   "scripts": {
@@ -29,7 +29,8 @@
     "grunt": "~0.4.2",
     "grunt-contrib-jshint": "~0.7.2",
     "grunt-mocha-test": "~0.8.1",
-    "chai": "~1.8.1"
+    "chai": "~1.8.1",
+    "fp": "~0.1.0"
   },
   "peerDependencies": {
     "grunt": "~0.4"
