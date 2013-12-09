@@ -33,7 +33,8 @@ module.exports = function(grunt) {
 
       // A list of all files that could contain tasks you want to load. 
       // Getting this list is outside the scope of this module.
-      // Ex: ['node_modules/foo/tasks/grunt-foo.js', 'tasks/file_name.js']
+      // This list should be fully resolved.
+      // Ex: ['/path/to/node_modules/foo/tasks/grunt-foo.js', '/path/to/tasks/file_name.js']
   var taskFiles = getTaskFiles(),
   
       // Optional: Not every grunt task is declared in a file of the same name. 
@@ -59,3 +60,7 @@ module.exports = function(grunt) {
 ```
 
 This could ultimately be a bad idea, but I'd like to experiment with it. Because parts of this are brittle, and getting the list of all files a task could be declared in is a burden, I don't recommend using this module unless your task load time is getting painful.
+
+### Caveats
+* Does not handle `grunt.task.renameTask`
+* Uses `require('task-module')(grunt)` to load tasks instead of `grunt.task.load`
