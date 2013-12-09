@@ -47,6 +47,20 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', 'test');
-    grunt.registerTask('test', 'jshint', 'mochaTest');
+    grunt.registerTask('test', ['jshint', 'mochaTest', 'e2e']);
+
+    grunt.registerTask('e2e', function() {
+        var lazyGruntLoading = require('./');
+        lazyGruntLoading(grunt, [
+            './test/fixtures/task-a.js',
+            './test/fixtures/grunt-task-b.js',
+            './test/fixtures/need-to-be-overridden.js'
+        ], {}, grunt.verbose.write);
+
+        grunt.task.run('task-a');
+        grunt.task.run(['task-b']);
+        grunt.task.run(['task-a:target-a']);
+        grunt.task.run(['task-a', 'task-b', 'task-c']);
+    });
 
 };
